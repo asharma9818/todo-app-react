@@ -1,0 +1,29 @@
+start with a funtion in App.js, we return a div with a component Todolist
+now we need a TodoForm first, for that we use function and return a form with input and button
+Now a form can be submitted so we use onsubmit method in the form tag and pass a function handlesubmit which we will create.
+for input box we have a text input to handle and be displayed
+so we have to get a value=input 
+also we need to handlechange using onchange method 
+
+now we have to initialize the state to use the state.
+for this we use usestate for input and set the initial state to empty string
+because we need a blank input box on render
+
+we create handleChange function to which we pass a synthetic event e
+we have to use e.preventDefault() to prevent the default behavior
+or any undesired behavior of the browser.
+we set the input using the setInput state to e.target.value
+
+now we need an id and text to be generated onsubmit the form
+so we do props.onSubmit and generate id using math and text we use the input from usestate
+
+we also need to clear the input box after submit so we setInput state to empty string at the end of the function
+
+now we jump to create TodoList
+we again use a function component 
+and return a div with h1 and TodoForm component
+here we dont have any view other than h1 as we have to just pass the list as props to the TodoForm component
+now TodoForm component can take onsubmit props to be shared with TodoForm component
+
+here again we usestate for todos & newtodos
+we create an addTodo function to which we pass todo
